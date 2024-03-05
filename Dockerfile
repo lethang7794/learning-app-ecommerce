@@ -6,7 +6,7 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 RUN chmod +x /usr/local/bin/install-php-extensions && install-php-extensions mysqli
 
 # Copy the application source code to `/var/www/html/`.
-COPY ./* /var/www/html/
+COPY ./ /var/www/html/
 
 # Update database connection strings to point to a Kubernetes service named `mysql-service`.
 ENV DB_HOST="mysql-service"
